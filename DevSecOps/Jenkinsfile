@@ -60,5 +60,10 @@ pipeline {
                 echo "App Deployed Successfully"
             }
         }
+        stage("github scm"){
+            steps{
+                echo "SCM Successfull"
+            }
+        }
     }
 }
