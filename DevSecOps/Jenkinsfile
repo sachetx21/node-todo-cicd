@@ -65,5 +65,12 @@ pipeline {
                 echo "SCM Successfull"
             }
         }
+        stage("Old image delete"){
+            steps{
+                sh "docker image prune -a -f"
+                echo "unused umages deletes Successfully, this is quite risky"
+                echo "App Deployed Successfully and can be accessed on port 8000"
+            }
+        }
     }
 }
